@@ -37,7 +37,7 @@ mixin _$RegisteredApplication {
   String get redirectUri => throw _privateConstructorUsedError;
 
   /// Used for Push Streaming API.
-  String get vapidKey => throw _privateConstructorUsedError;
+  String? get vapidKey => throw _privateConstructorUsedError;
 
   /// The website associated with your application.
   String? get website => throw _privateConstructorUsedError;
@@ -60,7 +60,7 @@ abstract class $RegisteredApplicationCopyWith<$Res> {
       String clientId,
       String clientSecret,
       String redirectUri,
-      String vapidKey,
+      String? vapidKey,
       String? website});
 }
 
@@ -83,7 +83,7 @@ class _$RegisteredApplicationCopyWithImpl<$Res,
     Object? clientId = null,
     Object? clientSecret = null,
     Object? redirectUri = null,
-    Object? vapidKey = null,
+    Object? vapidKey = freezed,
     Object? website = freezed,
   }) {
     return _then(_value.copyWith(
@@ -107,10 +107,10 @@ class _$RegisteredApplicationCopyWithImpl<$Res,
           ? _value.redirectUri
           : redirectUri // ignore: cast_nullable_to_non_nullable
               as String,
-      vapidKey: null == vapidKey
+      vapidKey: freezed == vapidKey
           ? _value.vapidKey
           : vapidKey // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       website: freezed == website
           ? _value.website
           : website // ignore: cast_nullable_to_non_nullable
@@ -133,7 +133,7 @@ abstract class _$$_RegisteredApplicationCopyWith<$Res>
       String clientId,
       String clientSecret,
       String redirectUri,
-      String vapidKey,
+      String? vapidKey,
       String? website});
 }
 
@@ -153,7 +153,7 @@ class __$$_RegisteredApplicationCopyWithImpl<$Res>
     Object? clientId = null,
     Object? clientSecret = null,
     Object? redirectUri = null,
-    Object? vapidKey = null,
+    Object? vapidKey = freezed,
     Object? website = freezed,
   }) {
     return _then(_$_RegisteredApplication(
@@ -177,10 +177,10 @@ class __$$_RegisteredApplicationCopyWithImpl<$Res>
           ? _value.redirectUri
           : redirectUri // ignore: cast_nullable_to_non_nullable
               as String,
-      vapidKey: null == vapidKey
+      vapidKey: freezed == vapidKey
           ? _value.vapidKey
           : vapidKey // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       website: freezed == website
           ? _value.website
           : website // ignore: cast_nullable_to_non_nullable
@@ -199,7 +199,7 @@ class _$_RegisteredApplication implements _RegisteredApplication {
       required this.clientId,
       required this.clientSecret,
       required this.redirectUri,
-      required this.vapidKey,
+      this.vapidKey,
       this.website});
 
   factory _$_RegisteredApplication.fromJson(Map<String, dynamic> json) =>
@@ -227,7 +227,7 @@ class _$_RegisteredApplication implements _RegisteredApplication {
 
   /// Used for Push Streaming API.
   @override
-  final String vapidKey;
+  final String? vapidKey;
 
   /// The website associated with your application.
   @override
@@ -283,7 +283,7 @@ abstract class _RegisteredApplication implements RegisteredApplication {
       required final String clientId,
       required final String clientSecret,
       required final String redirectUri,
-      required final String vapidKey,
+      final String? vapidKey,
       final String? website}) = _$_RegisteredApplication;
 
   factory _RegisteredApplication.fromJson(Map<String, dynamic> json) =
@@ -312,7 +312,7 @@ abstract class _RegisteredApplication implements RegisteredApplication {
   @override
 
   /// Used for Push Streaming API.
-  String get vapidKey;
+  String? get vapidKey;
   @override
 
   /// The website associated with your application.

@@ -19,7 +19,7 @@ _$_RegisteredApplication _$$_RegisteredApplicationFromJson(Map json) =>
           clientId: $checkedConvert('client_id', (v) => v as String),
           clientSecret: $checkedConvert('client_secret', (v) => v as String),
           redirectUri: $checkedConvert('redirect_uri', (v) => v as String),
-          vapidKey: $checkedConvert('vapid_key', (v) => v as String),
+          vapidKey: $checkedConvert('vapid_key', (v) => v as String?),
           website: $checkedConvert('website', (v) => v as String?),
         );
         return val;
