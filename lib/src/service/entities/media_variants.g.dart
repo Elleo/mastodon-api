@@ -13,8 +13,8 @@ _$_MediaVariants _$$_MediaVariantsFromJson(Map json) => $checkedCreate(
       json,
       ($checkedConvert) {
         final val = _$_MediaVariants(
-          width: $checkedConvert('width', (v) => v as int),
-          height: $checkedConvert('height', (v) => v as int),
+          width: $checkedConvert('width', (v) => v as int?),
+          height: $checkedConvert('height', (v) => v as int?),
           size: $checkedConvert('size', (v) => v as String?),
           aspect: $checkedConvert('aspect', (v) => (v as num?)?.toDouble()),
           frameRate: $checkedConvert('frame_rate', (v) => v as String?),
